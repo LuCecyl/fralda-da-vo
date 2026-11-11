@@ -1,0 +1,35 @@
+name: Atualizar preços
+
+on:
+  schedule:
+    - cron: "0 10 * * *"   # 07:00 em Brasília, uma vez por dia
+  workflow_dispatch:        # botão "Run workflow" para atualizar na hora
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Coletar preços e mandar alerta
+        env:
+          EMAIL_USUARIO: ${{ secrets.EMAIL_USUARIO }}
+          EMAIL_SENHA_APP: ${{ secrets.EMAIL_SENHA_APP }}
+          EMAIL_PARA: ${{ secrets.EMAIL_PARA }}
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+          SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
+          SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
+        run: python3 coletar.py
+      - name: Salvar
+        run: |
+          git config user.name "robo-precos"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Preços de $(TZ=America/Sao_Paulo date '+%d/%m %H:%M')"
+          git push

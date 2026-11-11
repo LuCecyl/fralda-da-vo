@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fralda da Vó</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Preços da Bigfral Moviment G/XG atualizados automaticamente">
+<style>
+:root{
+  --bg:#f6f3ee; --card:#ffffff; --ink:#1f2a2e; --muted:#5f6b70; --line:#e3ddd3;
+  --accent:#2f6f5e; --accent-ink:#fff; --good:#1f7a4d; --good-bg:#e3f4ea;
+  --warn:#9a5b00; --warn-bg:#fdf0d9; --bad:#a3352b; --bad-bg:#fbe5e2; --chip:#efe9df;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#151a1c; --card:#1f2629; --ink:#eef1f2; --muted:#a3adb1; --line:#323b3f;
+    --accent:#5fb39b; --accent-ink:#0d1a16; --good:#6fd49e; --good-bg:#1d3a2b;
+    --warn:#f0b75e; --warn-bg:#3a2e17; --bad:#f08b80; --bad-bg:#3d2220; --chip:#2a3236; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151a1c; --card:#1f2629; --ink:#eef1f2; --muted:#a3adb1; --line:#323b3f;
+  --accent:#5fb39b; --accent-ink:#0d1a16; --good:#6fd49e; --good-bg:#1d3a2b;
+  --warn:#f0b75e; --warn-bg:#3a2e17; --bad:#f08b80; --bad-bg:#3d2220; --chip:#2a3236; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding-block:20px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:1.6rem;margin:4px 0 2px}
+h2{font-size:1.1rem;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:16px}
+.hint{color:var(--muted);font-size:.9rem;margin:4px 0 0}
+.banner{border-radius:12px;padding:12px 14px;margin-bottom:16px;font-weight:600;background:var(--warn-bg);color:var(--warn)}
+.banner.hot{background:var(--good-bg);color:var(--good)}
+.hero .store{font-size:.95rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.hero .price{font-size:2.3rem;font-weight:800;line-height:1.1;margin:4px 0}
+.hero .price small{font-size:1rem;font-weight:500;color:var(--muted)}
+.hero .what{margin:0 0 10px}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;padding:3px 9px;border-radius:999px;vertical-align:middle}
+.tag.good{background:var(--good-bg);color:var(--good)}
+.tag.ok{background:var(--chip);color:var(--muted)}
+.tag.bad{background:var(--bad-bg);color:var(--bad)}
+.tag.fem{background:var(--chip);color:var(--muted);font-weight:600}
+a.buy{display:block;text-align:center;text-decoration:none;font-weight:700;padding:13px;border-radius:12px;background:var(--accent);color:var(--accent-ink);margin-top:12px}
+.month{background:var(--chip);border-radius:12px;padding:10px 12px;margin-top:12px;font-size:.92rem}
+.month input{width:52px;font:inherit;padding:4px 6px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pack{background:var(--chip);border-radius:12px;padding:10px;text-decoration:none;color:var(--ink);display:block}
+.pack .n{font-size:.8rem;color:var(--muted);font-weight:600}
+.pack .u{font-size:1.15rem;font-weight:800}
+.pack .s{font-size:.8rem;color:var(--muted)}
+.pack.none{opacity:.55}
+.offer{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.offer:first-child{border-top:0}
+.offer .l b{display:block}
+.offer .l span{font-size:.85rem;color:var(--muted)}
+.offer .r{text-align:right;white-space:nowrap}
+.offer .r b{display:block;font-variant-numeric:tabular-nums}
+.offer .r span{font-size:.85rem;color:var(--muted)}
+.toggle{display:flex;align-items:center;gap:8px;font-size:.92rem;color:var(--muted);margin:0 0 12px}
+.toggle input{width:20px;height:20px}
+details summary{cursor:pointer;font-weight:700;list-style:none}
+details summary::after{content:" ▾";color:var(--muted)}
+details[open] summary::after{content:" ▴"}
+.stores{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.stores a{display:block;text-decoration:none;color:var(--ink);background:var(--chip);border-radius:12px;padding:10px 12px;font-weight:600}
+svg.chart{width:100%;height:auto;display:block;margin-top:8px}
+ul.tips{padding-left:20px;margin:6px 0 0}
+ul.tips li{margin-bottom:8px}
+.empty{color:var(--muted)}
+.alert{background:var(--good-bg);border:2px solid var(--good);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.alert strong{color:var(--good);display:block;font-size:1.05rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.9rem;color:var(--muted);margin:2px 0 10px}
+ol.rank{list-style:none;margin:0;padding:0;counter-reset:r}
+ol.rank li{counter-increment:r}
+ol.rank a{display:grid;grid-template-columns:2rem 1fr auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+ol.rank li:first-child a{border-top:0}
+ol.rank a::before{content:counter(r) "º";font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+ol.rank li:first-child a::before{color:var(--good)}
+ol.rank .l{min-width:0}
+ol.rank .l b{display:block}
+ol.rank .l span{font-size:.85rem;color:var(--muted)}
+ol.rank .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+ol.rank .r b{display:block}
+ol.rank .r span{font-size:.85rem;color:var(--muted)}
+ol.rank .tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+ol.rank .tag{font-size:.7rem;padding:1px 7px}
+ol.rank li.cheap a{background:var(--good-bg);margin:0 -16px;padding-left:16px;padding-right:16px}
+button.more{width:100%;font:inherit;font-weight:600;padding:10px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;margin-top:6px}
+#cupons a{color:var(--accent)}
+.loja{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+#lojas .loja:first-child{border-top:0}
+.loja .l{min-width:0}.loja .l b{display:block}.loja .l span{font-size:.85rem;color:var(--muted)}
+.loja .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.loja .r b{display:block}.loja .r span{font-size:.85rem;color:var(--muted)}
+.loja.off .r{color:var(--accent);font-weight:600;font-size:.9rem}
+footer{color:var(--muted);font-size:.8rem;text-align:center;line-height:1.6}
+</style>
+</head>
+<body>
+<main>
+  <h1>Fralda da Vó Lourdes</h1>
+  <p class="sub">Bigfral Moviment G/XG — preços buscados sozinhos todo dia às 7h</p>
+
+  <div id="alerta"></div>
+  <div id="promo"></div>
+
+  <section class="card hero" id="hero"><p class="empty">Carregando preços…</p></section>
+
+  <section class="card">
+    <h2>Melhor preço em cada loja</h2>
+    <div id="lojas"></div>
+  </section>
+
+  <section class="card">
+    <h2>Ranking dos mais baratos</h2>
+    <p class="hint" style="margin:0 0 6px">Ordenado pelo preço de cada fralda. Toque numa linha para abrir na loja.</p>
+    <ol class="rank" id="rank"></ol>
+    <button class="more" id="more" hidden>Ver mais ofertas</button>
+    <p class="hint" id="cupons"></p>
+  </section>
+
+  <section class="card">
+    <h2>Por tamanho de pacote</h2>
+    <label class="toggle"><input type="checkbox" id="fem" checked> Incluir o modelo feminino</label>
+    <div class="packs" id="packs"></div>
+    <p class="hint">Mostra o mais barato de cada tamanho. Toque para abrir na loja.</p>
+  </section>
+
+  <section class="card">
+    <h2>O preço está bom hoje?</h2>
+    <div id="trend"><p class="empty">Carregando…</p></div>
+  </section>
+
+
+
+  <section class="card">
+    <h2>Dicas para pagar menos</h2>
+    <ul class="tips">
+      <li><b>Amazon “Programe e Poupe”:</b> assinar a entrega todo mês costuma dar 5–10% a mais de desconto, e chega sozinho.</li>
+      <li><b>Datas que costumam baixar:</b> 11.11, Black Friday (fim de novembro), 12.12, Dia do Consumidor (15/03), Prime Day (julho) e as “datas duplas” da Shopee e do Mercado Livre (5.5, 6.6, 9.9…).</li>
+      <li><b>Confira o preço na loja antes de pagar</b>, porque ele pode mudar entre uma atualização e outra. Veja também o frete e o cupom no carrinho.</li>
+      <li><b>Loja confiável:</b> no Magalu e na Americanas, veja se quem vende é a própria loja ou um vendedor bem avaliado.</li>
+    </ul>
+  </section>
+
+  <footer id="foot"></footer>
+</main>
+
+<script>
+const brl = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const ls = {get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}},
+            set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const REF_GOOD = 2.90, REF_BAD = 3.60; // referência inicial, até ter histórico suficiente
+
+const q = encodeURIComponent("bigfral moviment g/xg");
+const LOJAS = [
+  ["Amazon",`https://www.amazon.com.br/s?k=${q}`],
+  ["Mercado Livre","https://lista.mercadolivre.com.br/bigfral-moviment-g-xg"],
+  ["Shopee",`https://shopee.com.br/search?keyword=${q}`],
+  ["Magalu","https://www.magazineluiza.com.br/busca/bigfral+moviment+g+xg/"],
+  ["Americanas",`https://www.americanas.com.br/busca/${q}`],
+  ["Panvel",`https://www.panvel.com/panvel/buscarProduto.do?termoPesquisa=${q}`],
+  ["São João","https://www.saojoaofarmacias.com.br/bigfral%20moviment%20g%20xg?_q=bigfral%20moviment%20g%20xg&map=ft"],
+  ["Pague Menos",`https://www.paguemenos.com.br/busca?ft=${q}`],
+];
+// Próxima data de promoção
+(function(){
+  const now = new Date(); now.setHours(0,0,0,0);
+  const bf = y => { const d=new Date(y,10,30); while(d.getDay()!==5) d.setDate(d.getDate()-1); return d; };
+  const ev = [];
+  for (const y of [now.getFullYear(), now.getFullYear()+1]){
+    for (let m=1;m<=12;m++) ev.push({d:new Date(y,m-1,m), n:`${m}.${m} (Shopee/Mercado Livre)`});
+    ev.push({d:new Date(y,2,15), n:"Dia do Consumidor"}, {d:bf(y), n:"Black Friday"}, {d:new Date(y,6,15), n:"Prime Day da Amazon (por volta desta data)"});
+  }
+  ev.sort((a,b)=>a.d-b.d);
+  const next = ev.find(e=>e.d>=now), days = Math.round((next.d-now)/864e5), dt = next.d.toLocaleDateString("pt-BR");
+  document.getElementById("promo").innerHTML =
+    days===0 ? `<div class="banner hot">Hoje é ${next.n}! Bom dia para comprar.</div>`
+    : days<=7 ? `<div class="banner">${days>1?`Faltam ${days} dias`:"Falta 1 dia"} para ${next.n} (${dt}). Se der, espere para comprar.</div>`
+    : `<div class="banner" style="font-weight:500">Próxima data de promoção: ${next.n} em ${dt}.</div>`;
+})();
+
+let DATA = null, HIST = [], META = 2.60;
+const fem = document.getElementById("fem");
+fem.checked = ls.get("fem", true);
+fem.onchange = () => { ls.set("fem", fem.checked); render(); };
+
+function normal(){
+  const v = HIST.slice(-60).map(d=>d.melhor).sort((a,b)=>a-b);
+  if (v.length < 7) return null;
+  const m = Math.floor(v.length/2);
+  return v.length%2 ? v[m] : (v[m-1]+v[m])/2;
+}
+function verdict(u){
+  const n = normal(), good = n ? n*0.97 : REF_GOOD, bad = n ? n*1.08 : REF_BAD;
+  return u<=good ? ["good","Bom preço"] : u>=bad ? ["bad","Caro"] : ["ok","Preço normal"];
+}
+const label = o => `Pacote de ${o.unidades}${o.feminina?" · feminina":""}`;
+
+function render(){
+  const ofs = DATA.ofertas.filter(o => fem.checked || !o.feminina).sort((a,b)=>a.porFralda-b.porFralda);
+  const hero = document.getElementById("hero");
+  if (!ofs.length){ hero.innerHTML = `<p class="empty">Nenhuma oferta encontrada agora.</p>`; return; }
+  const b = ofs[0], [vc,vl] = verdict(b.porFralda), perDay = ls.get("porDia",3);
+  const month = perDay*30, packs = Math.ceil(month/b.unidades);
+  hero.innerHTML = `
+    <div class="store">Mais barato agora · ${esc(b.loja)}</div>
+    <div class="price">${brl(b.porFralda)} <small>por fralda</small></div>
+    <p class="what">${label(b)} por <b>${brl(b.preco)}</b> <span class="tag ${vc}">${vl}</span></p>
+    <div class="meta">Meta: ${brl(META)} por fralda · ${b.porFralda<=META?`<span class="tag good">Abaixo da meta!</span>`:`<span>faltam ${brl(b.porFralda-META)} por fralda</span>`}</div>
+    <div class="month">A vó usa <input type="number" id="perDay" min="1" max="10" inputmode="numeric" value="${perDay}"> por dia → ${month} no mês.
+      Comprando aqui: ${packs} pacote${packs>1?"s":""} ≈ <b>${brl(packs*b.preco)}</b></div>
+    <a class="buy" href="${esc(b.link)}" target="_blank" rel="noopener">Abrir na loja (${esc(b.loja)}) ↗</a>`;
+  const pd = document.getElementById("perDay");
+  pd.onchange = () => { ls.set("porDia", Math.max(1, +pd.value||3)); render(); };
+
+  // Por tamanho
+  const groups = [["7–8 unidades",o=>o.unidades<=8],["16 unidades",o=>o.unidades>8&&o.unidades<=16],["32 ou mais",o=>o.unidades>16]];
+  document.getElementById("packs").innerHTML = groups.map(([n,f])=>{
+    const o = ofs.filter(f)[0];
+    if (!o) return `<div class="pack none"><div class="n">${n}</div><div class="u">—</div><div class="s">não achei hoje</div></div>`;
+    return `<a class="pack" href="${esc(o.link)}" target="_blank" rel="noopener"><div class="n">${n}</div>
+      <div class="u">${brl(o.porFralda)}</div><div class="s">${brl(o.preco)} · ${esc(o.loja)}${o.unidades>32?` · kit ${o.unidades}`:""}${o.feminina?" · fem.":""}</div></a>`;
+  }).join("");
+
+  // Melhor por loja
+  document.getElementById("lojas").innerHTML = LOJAS.map(([n,u])=>{
+    const o = ofs.find(x=>x.loja===n);
+    if (!o) return `<a class="loja off" href="${u}" target="_blank" rel="noopener"><div class="l"><b>${n}</b><span>Não consegui ler automático hoje</span></div><div class="r">Abrir busca ↗</div></a>`;
+    const extra = o.precoAntigo > o.preco ? ` · −${Math.round((1-o.preco/o.precoAntigo)*100)}%` : "";
+    return `<a class="loja" href="${esc(o.link)}" target="_blank" rel="noopener"><div class="l"><b>${n}</b><span>${label(o)} · ${brl(o.preco)}${extra}</span></div><div class="r"><b>${brl(o.porFralda)}</b><span>por fralda</span></div></a>`;
+  }).join("");
+
+  // Ranking
+  const showAll = document.getElementById("more").dataset.open === "1";
+  const lista = showAll ? ofs : ofs.slice(0,8);
+  document.getElementById("rank").innerHTML = lista.map(o=>{
+    const tags = [];
+    if (o.porFralda <= META) tags.push(`<span class="tag good">abaixo da meta</span>`);
+    if (o.precoAntigo > o.preco) tags.push(`<span class="tag good">de ${brl(o.precoAntigo)} · −${Math.round((1-o.preco/o.precoAntigo)*100)}%</span>`);
+    if (o.baixou > 0) tags.push(`<span class="tag good">baixou ${o.baixou}%</span>`);
+    if (o.cashback >= 1) tags.push(`<span class="tag ok">${String(o.cashback).replace(".",",")}% de volta no Buscapé</span>`);
+    return `<li class="${o.porFralda<=META?"cheap":""}"><a href="${esc(o.link)}" target="_blank" rel="noopener">
+      <div class="l"><b>${esc(o.loja)}</b><span>${label(o)} · ${brl(o.preco)}</span>${tags.length?`<div class="tags">${tags.join("")}</div>`:""}</div>
+      <div class="r"><b>${brl(o.porFralda)}</b><span>por fralda</span></div></a></li>`;
+  }).join("");
+  const more = document.getElementById("more");
+  more.hidden = ofs.length <= 8;
+  more.textContent = showAll ? "Mostrar menos" : `Ver todas as ${ofs.length} ofertas`;
+  more.onclick = () => { more.dataset.open = showAll ? "0" : "1"; render(); };
+
+  // Cupons
+  const CUP = {"Amazon":"amazon","Magalu":"magazine-luiza","Americanas":"americanas"};
+  const lojas = [...new Set(ofs.slice(0,8).map(o=>o.loja))].filter(l=>CUP[l]);
+  document.getElementById("cupons").innerHTML = lojas.length ? `Cupons: o cupom só aparece no carrinho da loja. Para ver os cupons do dia: ${lojas.map(l=>`<a href="https://www.buscape.com.br/cupom-de-desconto/${CUP[l]}" target="_blank" rel="noopener">${esc(l)}</a>`).join(" · ")}.` : "";
+
+  // Alerta
+  const prev = HIST.filter(d=>d.data < (DATA.atualizado||"").slice(0,10)).slice(-14).map(d=>d.melhor);
+  const motivos = [];
+  if (b.porFralda <= META) motivos.push(`abaixo da sua meta de ${brl(META)}`);
+  if (prev.length >= 5 && b.porFralda < Math.min(...prev)*0.98) motivos.push(`menor preço dos últimos ${prev.length} dias`);
+  document.getElementById("alerta").innerHTML = motivos.length
+    ? `<div class="alert" role="status"><strong>🔔 Preço bom: ${brl(b.porFralda)} por fralda</strong>${esc(b.loja)}, pacote de ${b.unidades} por ${brl(b.preco)}: ${motivos.join(" e ")}.</div>` : "";
+
+  renderTrend(b.porFralda);
+}
+
+function renderTrend(today){
+  const el = document.getElementById("trend"), n = normal();
+  let txt;
+  if (n){
+    const diff = (today-n)/n*100;
+    txt = `<p>O preço normal (últimos 60 dias) é <b>${brl(n)}</b> por fralda. Hoje está <b>${brl(today)}</b>, ${Math.abs(diff)<1.5?"igual ao normal":diff<0?`<b>${Math.abs(diff).toFixed(0)}% mais barato</b>`:`${diff.toFixed(0)}% mais caro`}.</p>`;
+  } else {
+    txt = `<p>Ainda estou juntando histórico (${HIST.length} de 7 dias). Até lá, a referência é: abaixo de <b>${brl(REF_GOOD)}</b> por fralda é bom preço; acima de <b>${brl(REF_BAD)}</b> está caro.</p>`;
+  }
+  if (HIST.length >= 2){
+    const W=360,H=170,P=30, v=HIST.slice(-90), ys=v.map(d=>d.melhor), lo=Math.min(...ys)*0.97, hi=Math.max(...ys)*1.03;
+    const x=i=>P+(W-2*P)*(v.length===1?0.5:i/(v.length-1)), y=u=>H-P-(H-2*P)*(u-lo)/((hi-lo)||1);
+    const pts=v.map((d,i)=>`${x(i).toFixed(1)},${y(d.melhor).toFixed(1)}`).join(" ");
+    const fmt=s=>s.slice(8,10)+"/"+s.slice(5,7);
+    txt += `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Menor preço por fralda a cada dia">
+      ${n?`<line x1="${P}" x2="${W-P}" y1="${y(n)}" y2="${y(n)}" stroke="var(--muted)" stroke-dasharray="4 4"/><text x="${W-P}" y="${y(n)-5}" text-anchor="end" font-size="11" fill="var(--muted)">normal</text>`:""}
+      <polyline points="${pts}" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>
+      ${v.map((d,i)=>`<circle cx="${x(i)}" cy="${y(d.melhor)}" r="3.5" fill="var(--accent)"><title>${fmt(d.data)}: ${brl(d.melhor)}</title></circle>`).join("")}
+      <text x="${P}" y="${H-6}" font-size="11" fill="var(--muted)">${fmt(v[0].data)}</text>
+      <text x="${W-P}" y="${H-6}" font-size="11" fill="var(--muted)" text-anchor="end">${fmt(v[v.length-1].data)}</text>
+      <text x="4" y="${y(Math.max(...ys))+4}" font-size="11" fill="var(--muted)">${brl(Math.max(...ys))}</text>
+      <text x="4" y="${y(Math.min(...ys))+4}" font-size="11" fill="var(--muted)">${brl(Math.min(...ys))}</text>
+    </svg><p class="hint">Menor preço por fralda de cada dia. Com alguns meses de dados dá para ver em que época costuma baixar.</p>`;
+  }
+  el.innerHTML = txt;
+}
+
+Promise.all([
+  fetch("data/precos.json?"+Date.now()).then(r=>r.json()),
+  fetch("data/historico.json?"+Date.now()).then(r=>r.json()).catch(()=>[]),
+  fetch("config.json?"+Date.now()).then(r=>r.json()).catch(()=>({})),
+]).then(([p,h,c])=>{
+  DATA = p; HIST = h; if (c.precoAlvoPorFralda) META = +c.precoAlvoPorFralda; render();
+  const d = new Date(p.atualizado);
+  document.getElementById("foot").innerHTML = `Atualizado em ${d.toLocaleDateString("pt-BR")} às ${d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})}.<br>
+    Fontes: ${p.fontes.map(esc).join(", ")}. Confira o preço final na loja antes de pagar.`;
+}).catch(()=>{
+  document.getElementById("hero").innerHTML = `<p class="empty">Não consegui carregar os preços agora. Tente de novo em alguns minutos.</p>`;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[
+ {
+  "data": "2026-11-10",
+  "lojas": {
+   "Americanas": 2.5,
+   "Amazon": 2.69,
+   "Magalu": 2.72,
+   "Pague Menos": 2.84,
+   "São João": 3.99
+  },
+  "melhor": 2.5
+ }
+]
