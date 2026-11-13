@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-12T14:56-03:00",
+ "atualizado": "2026-11-13T14:30-03:00",
  "fontes": [
   "Buscapé",
   "Pague Menos",
@@ -14,7 +14,7 @@
    "preco": 19.99,
    "link": "https://www.buscape.com.br/lead?oid=1573522450",
    "via": "Buscapé",
-   "cashback": 0.5,
+   "cashback": 5.0,
    "baixou": 0,
    "id": "Buscapé:1573522450",
    "porFralda": 2.5
@@ -43,19 +43,6 @@
    "cashback": 1.0,
    "baixou": 0,
    "id": "Buscapé:1423207882",
-   "porFralda": 2.72
-  },
-  {
-   "loja": "Magalu",
-   "nome": "Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
-   "unidades": 16,
-   "feminina": false,
-   "preco": 43.49,
-   "link": "https://www.buscape.com.br/lead?oid=1381609666",
-   "via": "Buscapé",
-   "cashback": 1.0,
-   "baixou": 0,
-   "id": "Buscapé:1381609666",
    "porFralda": 2.72
   },
   {
@@ -119,7 +106,7 @@
    "preco": 26.99,
    "link": "https://www.buscape.com.br/lead?oid=1471515357",
    "via": "Buscapé",
-   "cashback": 0.5,
+   "cashback": 5.0,
    "baixou": 0,
    "id": "Buscapé:1471515357",
    "porFralda": 3.37
@@ -148,6 +135,19 @@
    "cashback": 1.0,
    "baixou": 0,
    "id": "Buscapé:1383041769",
+   "porFralda": 3.56
+  },
+  {
+   "loja": "Magalu",
+   "nome": "Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
+   "unidades": 16,
+   "feminina": false,
+   "preco": 56.99,
+   "link": "https://www.buscape.com.br/lead?oid=1381609666",
+   "via": "Buscapé",
+   "cashback": 1.0,
+   "baixou": 0,
+   "id": "Buscapé:1381609666",
    "porFralda": 3.56
   },
   {
