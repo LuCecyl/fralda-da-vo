@@ -1,9 +1,10 @@
 {
- "atualizado": "2026-11-15T00:14-03:00",
+ "atualizado": "2026-11-15T13:49-03:00",
  "fontes": [
   "Buscapé",
   "Pague Menos",
-  "São João"
+  "São João",
+  "Zoom"
  ],
  "ofertas": [
   {
@@ -38,11 +39,11 @@
    "unidades": 7,
    "feminina": true,
    "preco": 19.9,
-   "link": "https://www.buscape.com.br/lead?oid=400114445",
-   "via": "Buscapé",
+   "link": "https://www.zoom.com.br/lead?oid=400114445",
+   "via": "Zoom",
    "cashback": 0,
    "baixou": 0,
-   "id": "Buscapé:400114445",
+   "id": "Zoom:400114445",
    "porFralda": 2.84
   },
   {
