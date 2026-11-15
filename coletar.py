@@ -171,6 +171,134 @@ def de_shopee():
     return ofertas
 
 
+# ---------------- Cupons ----------------
+LOJAS_CUPOM = {  # loja: (slug Cuponomia, slug Promobit)
+    "Amazon": ("amazon", "amazon"), "Mercado Livre": ("mercado-livre", "mercado-livre"),
+    "Shopee": ("shopee", "shopee"), "Magalu": ("magazine-luiza", "magazine-luiza"),
+    "Americanas": ("americanas", "americanas"), "Panvel": ("panvel", None),
+    "São João": ("farmacias-sao-joao", None), "Pague Menos": ("pague-menos", None),
+}
+SERVE = (r"sa[uú]de|farm[aá]cia|higiene|fralda|geri[aá]tric|incontin|cuidado pessoal|todo o site|todo site|site todo|"
+         r"qualquer|todos os produtos|toda a loja|primeira compra|1[ªa] compra|compras acima de|pedidos acima de|compras a partir de")
+TALVEZ = (r"selecionad|participantes|\blinha\b|\bmarca\b|bahia|pernambuco|cear[aá]|maranh|para[ií]ba|piau[ií]|alagoas|sergipe|"
+          r"rio grande do norte|minas|esp[ií]rito santo|goi[aá]s|amazonas|distrito federal|\bregi")
+NAO_SERVE = (r"moda|m[oó]ve(is|l)|colch|sof[aá]|chocolate|lacta|heinz|nivea|tecnologia|eletr[oô]|ve[ií]culo|decora|constru|brinquedo|brinca|jogos|"
+             r"dermo|cabelo|infant|suplement|vitamina|beleza|perfum|maquiagem|pet\b|livro|game|celular|smartphone|iphone|notebook|"
+             r"\btv|tv\d|televis|jardim|esporte|ferrament|gelol|be better|bebida|vinho|cerveja|supermercado|"
+             r"papelaria|toy|natal|viage|passage|hotel|ingresso|curso|assinatura|prime video|kindle|alexa|echo|medicamento|\bmed\b|\bmed\d")
+
+
+def _txt(s):
+    import html as _h
+    return re.sub(r"\s+", " ", _h.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
+
+
+def classificar(titulo, desc, codigo="", amplo=False):
+    t = f"{titulo} {desc} {codigo}".lower()
+    if re.search(NAO_SERVE, t):
+        return None
+    if re.search(TALVEZ, t):
+        return "talvez"
+    if amplo:
+        return "serve"
+    return "serve" if re.search(SERVE, t) else "talvez"
+
+
+def detalhes(t):
+    t = t.replace(".", "").replace(",", ".")
+    m = re.search(r"(?:acima de|a partir de|m[ií]nimo de|minimo de)\s*R\$\s*(\d+(?:\.\d{1,2})?)", t, re.I)
+    minimo = float(m.group(1)) if m else 0
+    v = re.search(r"R\$\s*(\d+(?:\.\d{1,2})?)\s*(?:OFF|de desconto)", t, re.I)
+    pct = re.search(r"(\d{1,2})\s*%\s*(?:OFF|de desconto)", t, re.I)
+    teto = re.search(r"(?:limitad[oa] a|m[aá]ximo (?:de )?|at[eé] o limite de)\s*R\$\s*(\d+(?:\.\d{1,2})?)", t, re.I)
+    ate = bool(re.search(r"at[eé]\s*(?:R\$\s*)?\d+\s*%?\s*(?:OFF|de desconto)|progressiv|de R\$\s*\d+ a R\$", t, re.I))
+    return minimo, (float(v.group(1)) if v else 0), (int(pct.group(1)) if pct else 0), (float(teto.group(1)) if teto else 0), ate
+
+
+def faixas(t):
+    """Descontos progressivos: lista de [mínimo, valor], ex. R$20 OFF acima de R$199,90 | R$30 OFF acima de R$289,90."""
+    out = []
+    for seg in re.split(r"[|;]|\.\s", t):
+        seg = seg.replace(".", "").replace(",", ".")
+        v = re.search(r"R\$\s*(\d+(?:\.\d{1,2})?)\s*(?:OFF|de desconto)", seg, re.I) or \
+            re.search(r"(?:ganh[ea]|garanta|obtenha|desconto de)\s*R\$\s*(\d+(?:\.\d{1,2})?)", seg, re.I)
+        m = re.search(r"(?:acima de|a partir de)\s*:?\s*R\$\s*(\d+(?:\.\d{1,2})?)", seg, re.I)
+        if v and not m:
+            nums = re.findall(r"R\$\s*(\d+(?:\.\d{1,2})?)", seg)
+            if len(nums) >= 2 and nums[0] != v.group(1):
+                out.append([float(nums[0]), float(v.group(1))])
+        elif v and m:
+            out.append([float(m.group(1)), float(v.group(1))])
+    return sorted(out) if len(out) >= 2 else []
+
+
+def cupons_cuponomia(slug):
+    h = baixar(f"https://www.cuponomia.com.br/desconto/{slug}")
+    m = re.search(r'<ul class="coupon-list valid-coupons.*?</ul>', h, re.S)
+    out = []
+    for it in re.findall(r'<li class="item[^"]*"(.*?)</li>', m.group(0) if m else "", re.S):
+        g = lambda p: (lambda x: _txt(x.group(1)) if x else "")(re.search(p, it, re.S))
+        if g(r'data-type="(\w+)"') != "code":
+            continue
+        out.append({"titulo": g(r"<h3[^>]*>(.*?)</h3>"), "desc": g(r'class="item-desc">(.*?)</div>'),
+                    "codigo": g(r'js-itemCode">(.*?)</span>'), "amplo": g(r'data-is-store-wide="(\w+)"') == "true",
+                    "validade": "", "fonte": "Cuponomia", "link": f"https://www.cuponomia.com.br/desconto/{slug}"})
+    return out
+
+
+def cupons_promobit(slug):
+    h = baixar(f"https://www.promobit.com.br/cupons/loja/{slug}/")
+    pp = json.loads(re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', h, re.S).group(1))["props"]["pageProps"]
+    agora = datetime.now(BRT)
+    out = []
+    for x in (pp.get("serverCoupons") or {}).get("coupons") or []:
+        ate = x.get("couponUntil")
+        if x.get("couponStatusName") != "APPROVED":
+            continue
+        if ate and datetime.strptime(ate[:19], "%Y-%m-%dT%H:%M:%S").replace(tzinfo=BRT) < agora:
+            continue
+        out.append({"titulo": _txt(x.get("couponTitle")), "desc": _txt(x.get("couponInstructions"))[:200],
+                    "codigo": _txt(x.get("couponCode")), "amplo": False, "validade": (ate or "")[:10],
+                    "fonte": "Promobit", "link": f"https://www.promobit.com.br/cupons/loja/{slug}/"})
+    return out
+
+
+def coletar_cupons():
+    todos = {}
+    for loja, (cn, pb) in LOJAS_CUPOM.items():
+        brutos = []
+        for f, slug in ((cupons_cuponomia, cn), (cupons_promobit, pb)):
+            if not slug:
+                continue
+            try:
+                brutos += f(slug)
+            except Exception as e:
+                print(f"[cupons {loja} {f.__name__}] falhou: {e}", file=sys.stderr)
+            time.sleep(1)
+        lista, vistos = [], set()
+        for c in brutos:
+            tipo = classificar(c["titulo"], c["desc"], c["codigo"], c["amplo"])
+            cod = c["codigo"]
+            if not tipo or not cod:
+                continue
+            chave = cod.upper() if not re.search(r"link|ative|resgat", cod, re.I) else c["titulo"]
+            if chave in vistos:
+                continue
+            vistos.add(chave)
+            minimo, valor, pct, teto, ate = detalhes(f"{c['titulo']} {c['desc']}")
+            fx = faixas(c["desc"])
+            if fx:
+                minimo, valor, ate = fx[0][0], max(v for _, v in fx), False
+            c.update(tipo=tipo, minimo=minimo, valor=valor, pct=pct, teto=teto, ate=ate, faixas=fx,
+                     primeira=bool(re.search(r"primeira compra|1[ªa] compra|novos clientes", f"{c['titulo']} {c['desc']} {cod}", re.I)),
+                     semCodigo=bool(re.search(r"link|ative|resgat", cod, re.I)))
+            c.pop("amplo", None)
+            lista.append(c)
+        lista.sort(key=lambda c: (c["tipo"] != "serve", c["primeira"], -(c["valor"] or c["pct"])))
+        todos[loja] = lista[:6]
+    return todos
+
+
 def main():
     ofertas = []
     for fonte, base in COMPARADORES.items():
@@ -195,9 +323,14 @@ def main():
         print("Nenhuma oferta encontrada; mantendo os dados anteriores.", file=sys.stderr)
         sys.exit(1)
 
+    try:
+        cupons = coletar_cupons()
+    except Exception as e:
+        print(f"[cupons] falhou: {e}", file=sys.stderr)
+        cupons = {}
     DATA.mkdir(exist_ok=True)
     (DATA / "precos.json").write_text(json.dumps(
-        {"atualizado": agora.isoformat(timespec="minutes"), "fontes": fontes_ok, "ofertas": ofertas},
+        {"atualizado": agora.isoformat(timespec="minutes"), "fontes": fontes_ok, "ofertas": ofertas, "cupons": cupons},
         ensure_ascii=False, indent=1), encoding="utf-8")
 
     # Histórico: o menor preço por fralda de cada dia (por loja), para ver a tendência

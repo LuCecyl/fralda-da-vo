@@ -103,6 +103,28 @@ button.refresh:disabled{opacity:.6;cursor:default}
 .spin{display:inline-block;width:14px;height:14px;border:2px solid var(--muted);border-top-color:transparent;border-radius:50%;vertical-align:-2px;margin-right:6px;animation:sp 0.9s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion: reduce){.spin{animation:none}}
+.lojabox{border-top:1px solid var(--line);padding:10px 0}
+#lojas .lojabox:first-child{border-top:0}
+.lojabox .loja{border-top:0;padding:0}
+.cupline{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:.85rem;flex-wrap:wrap}
+.cupline .t{color:var(--good);font-weight:600;min-width:0;flex:1 1 100%}
+.cupline .t.soft{color:var(--muted);font-weight:500}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;letter-spacing:.03em;border:1.5px dashed var(--accent);border-radius:8px;padding:3px 8px;color:var(--ink);background:var(--card)}
+button.copy{font:inherit;font-size:.82rem;font-weight:700;border:0;border-radius:8px;padding:5px 10px;background:var(--accent);color:var(--accent-ink);cursor:pointer}
+button.copy:focus-visible,.chips button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:6px;scrollbar-width:thin}
+.chips button{flex:0 0 auto;font:inherit;font-size:.88rem;font-weight:600;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
+.chips button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chips button small{opacity:.75;font-weight:500}
+.cup{border-top:1px solid var(--line);padding:12px 0;display:flex;flex-direction:column;gap:6px}
+.cup:first-child{border-top:0}
+.cup .top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cup .ti{font-weight:700}
+.cup .de{font-size:.88rem;color:var(--muted)}
+.cup .tags{display:flex;flex-wrap:wrap;gap:4px}
+.cup .tags .tag{font-size:.72rem}
+.cup a.src{font-size:.82rem;color:var(--accent)}
+.save{background:var(--good-bg);color:var(--good);border-radius:8px;padding:6px 10px;font-size:.88rem;font-weight:600}
 footer{color:var(--muted);font-size:.8rem;text-align:center;line-height:1.6}
 </style>
 </head>
@@ -127,11 +149,17 @@ footer{color:var(--muted);font-size:.8rem;text-align:center;line-height:1.6}
   </section>
 
   <section class="card">
+    <h2>Cupons de hoje</h2>
+    <p class="hint" style="margin:0 0 10px">Buscados todo dia no Cuponomia e no Promobit. Toque em <b>Copiar</b> e cole o código no carrinho da loja.</p>
+    <div class="chips" id="cupLojas" role="tablist"></div>
+    <div id="cupLista"></div>
+  </section>
+
+  <section class="card">
     <h2>Ranking dos mais baratos</h2>
     <p class="hint" style="margin:0 0 6px">Ordenado pelo preço de cada fralda. Toque numa linha para abrir na loja.</p>
     <ol class="rank" id="rank"></ol>
     <button class="more" id="more" hidden>Ver mais ofertas</button>
-    <p class="hint" id="cupons"></p>
   </section>
 
   <section class="card">
@@ -213,6 +241,68 @@ function verdict(u){
 }
 const label = o => `Pacote de ${o.unidades}${o.feminina?" · feminina":""}`;
 
+const CUP = () => (DATA && DATA.cupons) || {};
+function resumo(c){
+  if (c.faixas && c.faixas.length) return `${brl(c.faixas[0][1])} a ${brl(c.faixas[c.faixas.length-1][1])} OFF, a partir de ${brl(c.faixas[0][0])}`;
+  const d = c.valor ? `${brl(c.valor)} OFF` : c.pct ? `${c.pct}% OFF` : c.titulo;
+  return c.minimo > 1 ? `${d} acima de ${brl(c.minimo)}` : d;
+}
+function economia(c, total){
+  if (!total || c.tipo !== "serve" || c.primeira || c.semCodigo || c.ate || total < (c.minimo||0)) return 0;
+  if (c.faixas && c.faixas.length){ const f = c.faixas.filter(([m])=>m<=total).pop(); return f ? f[1] : 0; }
+  if (c.valor) return Math.min(c.valor, total);
+  if (c.pct) return Math.min(total * c.pct / 100, c.teto || Infinity);
+  return 0;
+}
+function melhorCupom(loja, total){
+  const cs = (CUP()[loja] || []).filter(c => c.tipo === "serve");
+  if (!cs.length) return null;
+  const com = cs.map(c => ({c, economia: economia(c, total)})).sort((a,b)=>b.economia-a.economia);
+  if (com[0].economia > 0) return com[0];
+  const fac = cs.filter(c=>!c.semCodigo).sort((a,b)=>(a.minimo||0)-(b.minimo||0));
+  return {c: fac[0] || cs[0], economia: 0};
+}
+function codeBtn(c){
+  if (c.semCodigo) return `<a class="code" href="${esc(c.link)}" target="_blank" rel="noopener" style="text-decoration:none">Ativar no site ↗</a>`;
+  return `<span class="code">${esc(c.codigo)}</span><button class="copy" type="button" data-code="${esc(c.codigo)}">Copiar</button>`;
+}
+document.addEventListener("click", async e => {
+  const b = e.target.closest("button.copy"); if (!b) return;
+  e.preventDefault();
+  const code = b.dataset.code;
+  try { await navigator.clipboard.writeText(code); }
+  catch(err){ const t=document.createElement("textarea"); t.value=code; document.body.appendChild(t); t.select(); try{document.execCommand("copy")}catch(x){} t.remove(); }
+  const old = b.textContent; b.textContent = "Copiado ✓"; setTimeout(()=>{ b.textContent = old; }, 1600);
+});
+function renderCupons(month){
+  const cup = CUP(), lojas = LOJAS.map(l=>l[0]).filter(l => (cup[l]||[]).length);
+  const box = document.getElementById("cupLista"), tabs = document.getElementById("cupLojas");
+  if (!lojas.length){ tabs.innerHTML=""; box.innerHTML = `<p class="empty">Ainda não tenho cupons. Eles aparecem na próxima atualização.</p>`; return; }
+  let sel = ls.get("cupLoja", lojas[0]); if (!lojas.includes(sel)) sel = lojas[0];
+  tabs.innerHTML = lojas.map(l=>`<button type="button" role="tab" aria-selected="${l===sel}" data-l="${esc(l)}">${esc(l)} <small>${cup[l].length}</small></button>`).join("");
+  tabs.querySelectorAll("button").forEach(b=> b.onclick = () => { ls.set("cupLoja", b.dataset.l); renderCupons(month); });
+  const o = DATA.ofertas.filter(x=>x.loja===sel && (fem.checked||!x.feminina)).sort((a,b)=>a.porFralda-b.porFralda)[0];
+  const bestAll = DATA.ofertas.filter(x=>fem.checked||!x.feminina).sort((a,b)=>a.porFralda-b.porFralda)[0];
+  const total = o ? Math.ceil(month/o.unidades)*o.preco : (bestAll ? month*bestAll.porFralda : 0);
+  box.innerHTML = cup[sel].map(c=>{
+    const tags = [];
+    tags.push(c.tipo==="serve" ? `<span class="tag good">Vale pra fralda</span>` : `<span class="tag ok">Só produtos selecionados: confira</span>`);
+    if (c.primeira) tags.push(`<span class="tag ok">Só 1ª compra</span>`);
+    if (c.minimo > 1) tags.push(`<span class="tag ok">Mínimo ${brl(c.minimo)}</span>`);
+    if (c.teto) tags.push(`<span class="tag ok">Desconto máx. ${brl(c.teto)}</span>`);
+    if (c.validade) tags.push(`<span class="tag ok">Até ${c.validade.split("-").reverse().join("/")}</span>`);
+    const ec = economia(c, total);
+    return `<div class="cup">
+      <div class="top"><span class="ti">${esc(resumo(c))}</span></div>
+      <div class="top">${codeBtn(c)}</div>
+      ${c.desc ? `<div class="de">${esc(c.desc)}</div>` : ""}
+      <div class="tags">${tags.join("")}</div>
+      ${ec>0 ? `<div class="save">Na compra do mês aqui (${o?"":"~"}${brl(total)}): economiza ~${brl(ec)}</div>` : (o && c.minimo > total && c.tipo==="serve" ? `<div class="de">A compra do mês aqui dá ${brl(total)}; faltam ${brl(c.minimo-total)} pro mínimo.</div>` : "")}
+      <a class="src" href="${esc(c.link)}" target="_blank" rel="noopener">Ver regras no ${esc(c.fonte)} ↗</a>
+    </div>`;
+  }).join("");
+}
+
 function render(){
   const ofs = DATA.ofertas.filter(o => fem.checked || !o.feminina).sort((a,b)=>a.porFralda-b.porFralda);
   const hero = document.getElementById("hero");
@@ -239,13 +329,26 @@ function render(){
       <div class="u">${brl(o.porFralda)}</div><div class="s">${brl(o.preco)} · ${esc(o.loja)}${o.unidades>32?` · kit ${o.unidades}`:""}${o.feminina?" · fem.":""}</div></a>`;
   }).join("");
 
-  // Melhor por loja
+  // Melhor por loja (com o melhor cupom para a compra do mês)
   document.getElementById("lojas").innerHTML = LOJAS.map(([n,u])=>{
     const o = ofs.find(x=>x.loja===n);
-    if (!o) return `<a class="loja off" href="${u}" target="_blank" rel="noopener"><div class="l"><b>${n}</b><span>Não consegui ler automático hoje</span></div><div class="r">Abrir busca ↗</div></a>`;
-    const extra = o.precoAntigo > o.preco ? ` · −${Math.round((1-o.preco/o.precoAntigo)*100)}%` : "";
-    return `<a class="loja" href="${esc(o.link)}" target="_blank" rel="noopener"><div class="l"><b>${n}</b><span>${label(o)} · ${brl(o.preco)}${extra}</span></div><div class="r"><b>${brl(o.porFralda)}</b><span>por fralda</span></div></a>`;
+    let row;
+    if (!o) row = `<a class="loja off" href="${u}" target="_blank" rel="noopener"><div class="l"><b>${n}</b><span>Preço só abrindo a loja</span></div><div class="r">Abrir busca ↗</div></a>`;
+    else {
+      const extra = o.precoAntigo > o.preco ? ` · −${Math.round((1-o.preco/o.precoAntigo)*100)}%` : "";
+      row = `<a class="loja" href="${esc(o.link)}" target="_blank" rel="noopener"><div class="l"><b>${n}</b><span>${label(o)} · ${brl(o.preco)}${extra}</span></div><div class="r"><b>${brl(o.porFralda)}</b><span>por fralda</span></div></a>`;
+    }
+    const total = o ? Math.ceil(month/o.unidades)*o.preco : month*b.porFralda;
+    const best = melhorCupom(n, total);
+    let cl = "";
+    if (best && best.economia > 0)
+      cl = `<div class="cupline"><span class="t">Cupom: economiza ~${brl(best.economia)} na compra do mês (${o?"":"~"}${brl(total)})</span>${codeBtn(best.c)}</div>`;
+    else if (best)
+      cl = `<div class="cupline"><span class="t soft">Cupom: ${esc(resumo(best.c))}${best.c.primeira?" · só 1ª compra":""}</span>${codeBtn(best.c)}</div>`;
+    return `<div class="lojabox">${row}${cl}</div>`;
   }).join("");
+
+  renderCupons(month);
 
   // Ranking
   const showAll = document.getElementById("more").dataset.open === "1";

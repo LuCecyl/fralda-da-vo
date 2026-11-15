@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-14T13:23-03:00",
+ "atualizado": "2026-11-15T00:13-03:00",
  "fontes": [
   "Buscapé",
   "Pague Menos",
@@ -21,7 +21,7 @@
   },
   {
    "loja": "Amazon",
-   "nome": "Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
+   "nome": "Roupa Íntima Bigfral Moviment G/XG 16 Unidades | Liberdade de movimento com proteção",
    "unidades": 16,
    "feminina": false,
    "preco": 43.0,
@@ -231,5 +231,931 @@
    "id": "Buscapé:1385139742",
    "porFralda": 4.45
   }
- ]
+ ],
+ "cupons": {
+  "Amazon": [
+   {
+    "titulo": "Cupom Amazon garante até 40% de desconto",
+    "desc": "Selecione o melhor cupom para a sua compra no link!",
+    "codigo": "Ative o cupom no link",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/amazon",
+    "tipo": "serve",
+    "minimo": 0,
+    "valor": 0,
+    "pct": 40,
+    "teto": 0,
+    "ate": true,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": true
+   },
+   {
+    "titulo": "Promo Amazon com 10% OFF aplicando cupom",
+    "desc": "Desconto de 10% em compras acima de R$250, com desconto máximo limitado a R$100.",
+    "codigo": "NET10",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/amazon",
+    "tipo": "serve",
+    "minimo": 250.0,
+    "valor": 0,
+    "pct": 10,
+    "teto": 100.0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Cupom Exclusivo na Amazon: R$30 de desconto em compras acima R$100 - válido para a 1ª compra no APP",
+    "desc": "Frete grátis Amazon Prime: SIM Cupom válido para a primeira compra no aplicativo da Amazon, limitado a um uso por cliente! • R$30 OFF em compras acima de R$100 • Válido só pra 1ª compra no app da Amaz",
+    "codigo": "30PROMOBIT",
+    "validade": "2026-11-30",
+    "fonte": "Promobit",
+    "link": "https://www.promobit.com.br/cupons/loja/amazon/",
+    "tipo": "serve",
+    "minimo": 100.0,
+    "valor": 30.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": true,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Amazon concede R$20 OFF com cupom",
+    "desc": "R$20 OFF na primeira compra no app. Confira o regulamento da promoção no site.",
+    "codigo": "APPCOMPRA",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/amazon",
+    "tipo": "serve",
+    "minimo": 0,
+    "valor": 20.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": true,
+    "semCodigo": false
+   },
+   {
+    "titulo": "R$350 OFF com cupom Amazon",
+    "desc": "Desconto válido para itens selecionados.",
+    "codigo": "VEMDEAMAZON",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/amazon",
+    "tipo": "talvez",
+    "minimo": 0,
+    "valor": 350.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "30% OFF em suas compras com cupom Amazon",
+    "desc": "Desconto válido para produtos selecionados.",
+    "codigo": "MALAPRIME",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/amazon",
+    "tipo": "talvez",
+    "minimo": 0,
+    "valor": 0,
+    "pct": 30,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   }
+  ],
+  "Mercado Livre": [
+   {
+    "titulo": "Momento Mercado Livre: 30% OFF com cupom",
+    "desc": "30% OFF em compras a partir de R$1, limitado a R$500.",
+    "codigo": "CHEGOUCUPOM30",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/mercado-livre",
+    "tipo": "serve",
+    "minimo": 1.0,
+    "valor": 0,
+    "pct": 30,
+    "teto": 500.0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Aproveite 30% de economia com cupom Mercado Livre",
+    "desc": "30% OFF em compras a partir de R$1, limitado a R$500.",
+    "codigo": "POUPAAGORA30",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/mercado-livre",
+    "tipo": "serve",
+    "minimo": 1.0,
+    "valor": 0,
+    "pct": 30,
+    "teto": 500.0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Faça compras com cupom Mercado Livre e obtenha 30% OFF",
+    "desc": "30% OFF em compras a partir de R$1, limitado a R$500.",
+    "codigo": "LEVEAGORA30",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/mercado-livre",
+    "tipo": "serve",
+    "minimo": 1.0,
+    "valor": 0,
+    "pct": 30,
+    "teto": 500.0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Compre com cupom Mercado Livre e ganhe 30% OFF",
+    "desc": "30% OFF em compras a partir de R$1, limitado a R$500.",
+    "codigo": "OFERTAJA30",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/mercado-livre",
+    "tipo": "serve",
+    "minimo": 1.0,
+    "valor": 0,
+    "pct": 30,
+    "teto": 500.0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Use cupom Mercado Livre e garanta 30% de desconto",
+    "desc": "Em compras acima de R$1, com desconto máximo limitado a R$500.",
+    "codigo": "ECONOMIZAML",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/mercado-livre",
+    "tipo": "serve",
+    "minimo": 1.0,
+    "valor": 0,
+    "pct": 30,
+    "teto": 500.0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Seleção imperdível com 30% OFF utilizando cupom Mercado Livre",
+    "desc": "Em compras acima de R$1, com desconto máximo limitado a R$500.",
+    "codigo": "DESCONTONAHORA",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/mercado-livre",
+    "tipo": "serve",
+    "minimo": 1.0,
+    "valor": 0,
+    "pct": 30,
+    "teto": 500.0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   }
+  ],
+  "Shopee": [
+   {
+    "titulo": "O momento chegou: Aplique cupom Shopee e ganhe R$ 200 OFF",
+    "desc": "Ganhe até R$ 200 de desconto aplicando o cupom no seu pedido em compras acima de R$ 1.200.",
+    "codigo": "C0M3C0U200",
+    "validade": "",
+    "fonte": "Promobit",
+    "link": "https://www.promobit.com.br/cupons/loja/shopee/",
+    "tipo": "serve",
+    "minimo": 1200.0,
+    "valor": 200.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": true,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Confira desconto imperdível de R$70 com cupom Shopee",
+    "desc": "R$70 OFF em compras acima de R$399.",
+    "codigo": "70D3D3SC0NT0",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/shopee",
+    "tipo": "serve",
+    "minimo": 399.0,
+    "valor": 70.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Cupons diários da Shopee oferecem até 50% OFF",
+    "desc": "Acesse o link, escolha o melhor cupom para a sua compra e clique em \"eu quero\" (lembre-se de que cada cupom tem uma regrinha para utilização). Ao adicionar o seu produto no carrinho, verá a opção de cupom escolhida em \"mais vouchers\". Ative o código e verifique o desconto aplicado ao valor final da sua compra.",
+    "codigo": "Cupom no Link",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/shopee",
+    "tipo": "serve",
+    "minimo": 0,
+    "valor": 0,
+    "pct": 50,
+    "teto": 0,
+    "ate": true,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": true
+   },
+   {
+    "titulo": "Ganhe R$40 OFF em suas compras com cupom Shopee",
+    "desc": "R$40 OFF em compras acima de R$199.",
+    "codigo": "40OFFD4SH0",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/shopee",
+    "tipo": "serve",
+    "minimo": 199.0,
+    "valor": 40.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "R$35 OFF com cupom Shopee",
+    "desc": "R$35 OFF em compras acima de R$175.",
+    "codigo": "99N4SH0",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/shopee",
+    "tipo": "serve",
+    "minimo": 175.0,
+    "valor": 35.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Garanta R$30 OFF em suas compras com cupom Shopee exclusivo",
+    "desc": "R$30 OFF para compras acima de R$100.",
+    "codigo": "CUP0N0M1A1111PB",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/shopee",
+    "tipo": "serve",
+    "minimo": 100.0,
+    "valor": 30.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   }
+  ],
+  "Magalu": [
+   {
+    "titulo": "Faça compras com cupom de desconto Magazine Luiza e economize R$ 350",
+    "desc": "Use o cupom e garanta até R$ 350 de desconto em compras acima de R$ 3.200.",
+    "codigo": "INFLUDUPLA350",
+    "validade": "",
+    "fonte": "Promobit",
+    "link": "https://www.promobit.com.br/cupons/loja/magazine-luiza/",
+    "tipo": "serve",
+    "minimo": 3200.0,
+    "valor": 350.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": true,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Garanta R$50 OFF com cupom nas compras acima de R$349",
+    "desc": "",
+    "codigo": "PAYDAYPROMOBIT",
+    "validade": "",
+    "fonte": "Promobit",
+    "link": "https://www.promobit.com.br/cupons/loja/magazine-luiza/",
+    "tipo": "serve",
+    "minimo": 349.0,
+    "valor": 50.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Economize R$ 100 em seus pedidos aplicando cupom Magazine Luiza",
+    "desc": "Aplique o código promocional Magazine Luiza no carrinho de compras acima de R$ 1000 para economizar R$ 100.",
+    "codigo": "INFLU100",
+    "validade": "",
+    "fonte": "Promobit",
+    "link": "https://www.promobit.com.br/cupons/loja/magazine-luiza/",
+    "tipo": "serve",
+    "minimo": 1000.0,
+    "valor": 0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Magalu concede R$400 OFF com cupom",
+    "desc": "Aproveite desconto de R$400 para ofertas selecionadas.",
+    "codigo": "LU400",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/magazine-luiza",
+    "tipo": "talvez",
+    "minimo": 0,
+    "valor": 400.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Cupom Magalu garante R$325 OFF em suas compras",
+    "desc": "R$325 OFF em lista selecionada.",
+    "codigo": "LU325",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/magazine-luiza",
+    "tipo": "talvez",
+    "minimo": 0,
+    "valor": 325.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Cupom Magalu com R$300 OFF em suas compras",
+    "desc": "R$300 OFF para itens selecionados.",
+    "codigo": "LU300",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/magazine-luiza",
+    "tipo": "talvez",
+    "minimo": 0,
+    "valor": 300.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   }
+  ],
+  "Americanas": [
+   {
+    "titulo": "R$40 OFF em seus pedidos aplicando código promocional Americanas",
+    "desc": "Válido para pedidos acima de R$200. Confira o regulamento da promoção no site.",
+    "codigo": "OBA40",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/americanas",
+    "tipo": "serve",
+    "minimo": 200.0,
+    "valor": 40.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Ganhe R$20 OFF com cupom Americanas",
+    "desc": "R$20 OFF em pedidos acima de R$200.",
+    "codigo": "OBA20",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/americanas",
+    "tipo": "serve",
+    "minimo": 200.0,
+    "valor": 20.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Economize R$15 aplicando código promocional Americanas",
+    "desc": "R$15 OFF em compras acima de R$100. Válido para pedidos realizados no app da loja. Consulte o regulamento da promoção no site.",
+    "codigo": "MEUAPP",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/americanas",
+    "tipo": "serve",
+    "minimo": 100.0,
+    "valor": 15.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Aproveite cupom Americanas e ganhe 10% OFF em suas compras",
+    "desc": "Para compras a partir de R$30. Limitado a único uso por CPF.",
+    "codigo": "OBA10",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/americanas",
+    "tipo": "serve",
+    "minimo": 30.0,
+    "valor": 0,
+    "pct": 10,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Faça compras com cupom Americanas e garanta Frete Grátis",
+    "desc": "Frete grátis até R$15 em pedidos acima de R$100.",
+    "codigo": "FRETE15",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/americanas",
+    "tipo": "serve",
+    "minimo": 100.0,
+    "valor": 0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Americanas concede desconto de R$15 em suas compras com cupom",
+    "desc": "R$15 de desconto em pedidos acima de R$100, para primeira compra e para clientes sem compras a mais de 12 meses. Exclusivo para o app da loja.",
+    "codigo": "APP15",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/americanas",
+    "tipo": "serve",
+    "minimo": 100.0,
+    "valor": 15.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": true,
+    "semCodigo": false
+   }
+  ],
+  "Panvel": [
+   {
+    "titulo": "Garanta Frete Grátis em suas compras",
+    "desc": "Frete Grátis na entrega programada em compras acima de R$99.",
+    "codigo": "TEMFRETE",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/panvel",
+    "tipo": "serve",
+    "minimo": 99.0,
+    "valor": 0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Faça suas compras com cupom Panvel e aproveite R$10 OFF",
+    "desc": "R$10 OFF para sua primeira compra.",
+    "codigo": "PRIMEIRACOMPRA",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/panvel",
+    "tipo": "serve",
+    "minimo": 0,
+    "valor": 10.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": true,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Cupom Panvel concede desconto de 9%",
+    "desc": "9% OFF extra na compra acima de R$300 (desconto máximo de R$45). R$27 OFF extra na compra acima de R$300 | R$36 OFF extra na compra acima de R$400 | R$45 OFF extra na compra acima de R$500.",
+    "codigo": "AQUECE9",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/panvel",
+    "tipo": "talvez",
+    "minimo": 300.0,
+    "valor": 45.0,
+    "pct": 9,
+    "teto": 45.0,
+    "ate": false,
+    "faixas": [
+     [
+      300.0,
+      27.0
+     ],
+     [
+      400.0,
+      36.0
+     ],
+     [
+      500.0,
+      45.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Cupom Panvel de 10% OFF",
+    "desc": "10% OFF extra em uma compra acima de R$89 na marca Panvel.",
+    "codigo": "FESTIVAL10",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/panvel",
+    "tipo": "talvez",
+    "minimo": 89.0,
+    "valor": 0,
+    "pct": 10,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   }
+  ],
+  "São João": [
+   {
+    "titulo": "Use o cupom Farmácias São João e garanta até R$40 OFF",
+    "desc": "R$20 OFF em compras acima de R$199,90. | R$30 OFF em compras acima de R$289,90. | R$40 OFF em compras acima de R$379,90.",
+    "codigo": "PREBLACK",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/farmacias-sao-joao",
+    "tipo": "serve",
+    "minimo": 199.9,
+    "valor": 40.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [
+     [
+      199.9,
+      20.0
+     ],
+     [
+      289.9,
+      30.0
+     ],
+     [
+      379.9,
+      40.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Suas compras com até R$30 OFF aplicando cupom Farmácias São João",
+    "desc": "Nas compras acima de: R$159,90 garanta R$15 OFF; R$199,90 ganhe R$20 OFF; R$249,90 obtenha R$30 OFF.",
+    "codigo": "ESQUENTAOFF",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/farmacias-sao-joao",
+    "tipo": "serve",
+    "minimo": 159.9,
+    "valor": 30.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [
+     [
+      159.9,
+      15.0
+     ],
+     [
+      199.9,
+      20.0
+     ],
+     [
+      249.9,
+      30.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Desconto progressivo de R$10 a R$30 OFF nas Farmácias São João",
+    "desc": "Exceto: Ozempic, Wegovy, Mirena, Kyleena, PBMs, Controlados e especiais | Limitado a 6 por CPF.",
+    "codigo": "OFERTA",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/farmacias-sao-joao",
+    "tipo": "serve",
+    "minimo": 0,
+    "valor": 30.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": true,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Até R$25 de desconto utilizando cupom Farmácias São João",
+    "desc": "R$10 OFF em compras acima de R$169,90 | R$15 OFF em compras acima de R$229,90 | R$25 OFF em compras acima de R$289,90.",
+    "codigo": "GANHEMAIS",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/farmacias-sao-joao",
+    "tipo": "serve",
+    "minimo": 169.9,
+    "valor": 25.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [
+     [
+      169.9,
+      10.0
+     ],
+     [
+      229.9,
+      15.0
+     ],
+     [
+      289.9,
+      25.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Economize até R$24 com cupom Farmácias São João",
+    "desc": "Garanta R$12 OFF nas compras acima de R$169,90; R$18 OFF nas compras acima de R$209,90; R$24 OFF nas compras acima de R$249,90.",
+    "codigo": "ESQUENTASJ",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/farmacias-sao-joao",
+    "tipo": "serve",
+    "minimo": 169.9,
+    "valor": 24.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [
+     [
+      169.9,
+      12.0
+     ],
+     [
+      209.9,
+      18.0
+     ],
+     [
+      249.9,
+      24.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "R$20 de desconto em suas compras com cupom Farmácias São João",
+    "desc": "Itens de higiene com até R$20 OFF. R$12 OFF em compras acima de R$79,90 | R$20 OFF em compras acima de R$129,90.",
+    "codigo": "HIGIENE",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/farmacias-sao-joao",
+    "tipo": "serve",
+    "minimo": 79.9,
+    "valor": 20.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [
+     [
+      79.9,
+      12.0
+     ],
+     [
+      129.9,
+      20.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   }
+  ],
+  "Pague Menos": [
+   {
+    "titulo": "O maior desconto da festa: Até R$100 de desconto em suas compras",
+    "desc": "Desconto de R$30 em compras a partir de R$200 | R$50 a partir de R$300 | R$70 a partir de R$450 | R$100 a partir de R$650.",
+    "codigo": "ANIVERSARIO2026",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/pague-menos",
+    "tipo": "serve",
+    "minimo": 200.0,
+    "valor": 100.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": true,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Descontos progressivos: Até R$80 OFF na Pague Menos",
+    "desc": "Desconto de R$40 em compras a partir de R$220. | Desconto de R$60 em compras a partir de R$350. | Desconto de R$80 em compras a partir de R$500. 1 utilização por CPF. Válido para os produtos vendidos e entregues por Pague Menos; Não disponível para itens das lojas parceiras (marketplace); Não acumulativo com outras promoções, descontos e cupons.",
+    "codigo": "CONSUMIDOR26",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/pague-menos",
+    "tipo": "serve",
+    "minimo": 220.0,
+    "valor": 80.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [
+     [
+      220.0,
+      40.0
+     ],
+     [
+      350.0,
+      60.0
+     ],
+     [
+      500.0,
+      80.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "45 anos de Pague Menos: Até R$70 OFF com cupom progressivo",
+    "desc": "Desconto de R$30,00 em compras a partir de R$200,00. Desconto de R$50,00 em compras a partir de R$300,00. Desconto de R$70,00 em compras a partir de R$450,00.",
+    "codigo": "45ANOS",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/pague-menos",
+    "tipo": "serve",
+    "minimo": 200.0,
+    "valor": 70.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [
+     [
+      200.0,
+      30.0
+     ],
+     [
+      300.0,
+      50.0
+     ],
+     [
+      450.0,
+      70.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Sua saúde em dia: Até R$70 OFF em produtos na Pague Menos",
+    "desc": "Aproveite R$30 OFF em compras acima de R$200, R$50 OFF em compras acima de R$300 e R$70 OFF em compras acima de R$450. Válido para todos os produtos vendidos e entregues por Pague Menos, limitado a um único uso por CPF. Não acumulativo com outras promoções, descontos e cupons.",
+    "codigo": "LIVESAUDE",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/pague-menos",
+    "tipo": "serve",
+    "minimo": 200.0,
+    "valor": 70.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": true,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Pague Menos tem até R$70 de desconto",
+    "desc": "Desconto de R$30,00 em compras a partir de R$200,00 | Desconto de R$50,00 em compras a partir de R$300,00 | Desconto de R$70,00 em compras a partir de R$450,00. Válido para os produtos vendidos e entregues por Pague Menos; Não disponível para itens das lojas parceiras (marketplace); Não acumulativo com outras promoções, descontos e cupons.",
+    "codigo": "LIVE3DO3",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/pague-menos",
+    "tipo": "serve",
+    "minimo": 200.0,
+    "valor": 70.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [
+     [
+      200.0,
+      30.0
+     ],
+     [
+      300.0,
+      50.0
+     ],
+     [
+      450.0,
+      70.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Até R$70 OFF com cupom Pague Menos",
+    "desc": "Desconto de R$30 OFF em compras a partir de R$200 | R$50 OFF em compras a partir de R$300 | R$70 OFF em compras a partir de R$450.",
+    "codigo": "LIVE2DO2",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/pague-menos",
+    "tipo": "serve",
+    "minimo": 200.0,
+    "valor": 70.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [
+     [
+      200.0,
+      30.0
+     ],
+     [
+      300.0,
+      50.0
+     ],
+     [
+      450.0,
+      70.0
+     ]
+    ],
+    "primeira": false,
+    "semCodigo": false
+   }
+  ]
+ }
 }
