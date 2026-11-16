@@ -1,10 +1,9 @@
 {
- "atualizado": "2026-11-15T13:49-03:00",
+ "atualizado": "2026-11-16T17:00-03:00",
  "fontes": [
   "Buscapé",
   "Pague Menos",
-  "São João",
-  "Zoom"
+  "São João"
  ],
  "ofertas": [
   {
@@ -39,11 +38,11 @@
    "unidades": 7,
    "feminina": true,
    "preco": 19.9,
-   "link": "https://www.zoom.com.br/lead?oid=400114445",
-   "via": "Zoom",
+   "link": "https://www.buscape.com.br/lead?oid=400114445",
+   "via": "Buscapé",
    "cashback": 0,
    "baixou": 0,
-   "id": "Zoom:400114445",
+   "id": "Buscapé:400114445",
    "porFralda": 2.84
   },
   {
@@ -59,19 +58,6 @@
    "via": "Pague Menos",
    "id": "Pague Menos:119661",
    "porFralda": 2.84
-  },
-  {
-   "loja": "Magalu",
-   "nome": "Roupa Íntima Bigfral Moviment Unissex G/XG 16 Unidades, 16 unidades, 1",
-   "unidades": 16,
-   "feminina": false,
-   "preco": 49.67,
-   "link": "https://www.buscape.com.br/lead?oid=1392189836",
-   "via": "Buscapé",
-   "cashback": 1.0,
-   "baixou": 0,
-   "id": "Buscapé:1392189836",
-   "porFralda": 3.1
   },
   {
    "loja": "Magalu",
@@ -111,6 +97,19 @@
    "baixou": 0,
    "id": "Buscapé:1579537463",
    "porFralda": 3.37
+  },
+  {
+   "loja": "Magalu",
+   "nome": "Roupa Íntima Bigfral Moviment Unissex G/XG 16 Unidades, 16 unidades, 1",
+   "unidades": 16,
+   "feminina": false,
+   "preco": 54.9,
+   "link": "https://www.buscape.com.br/lead?oid=1392189836",
+   "via": "Buscapé",
+   "cashback": 1.0,
+   "baixou": 0,
+   "id": "Buscapé:1392189836",
+   "porFralda": 3.43
   },
   {
    "loja": "Magalu",
@@ -236,7 +235,7 @@
  "cupons": {
   "Amazon": [
    {
-    "titulo": "Cupom Amazon garante até 40% de desconto",
+    "titulo": "Cupom Amazon garante até 50% de desconto",
     "desc": "Selecione o melhor cupom para a sua compra no link!",
     "codigo": "Ative o cupom no link",
     "validade": "",
@@ -245,7 +244,7 @@
     "tipo": "serve",
     "minimo": 0,
     "valor": 0,
-    "pct": 40,
+    "pct": 50,
     "teto": 0,
     "ate": true,
     "faixas": [],
