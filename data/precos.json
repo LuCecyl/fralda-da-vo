@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-16T17:00-03:00",
+ "atualizado": "2026-11-17T15:57-03:00",
  "fontes": [
   "Buscapé",
   "Pague Menos",
@@ -14,7 +14,7 @@
    "preco": 19.99,
    "link": "https://www.buscape.com.br/lead?oid=1573522450",
    "via": "Buscapé",
-   "cashback": 0.5,
+   "cashback": 5.0,
    "baixou": 0,
    "id": "Buscapé:1573522450",
    "porFralda": 2.5
@@ -33,19 +33,6 @@
    "porFralda": 2.69
   },
   {
-   "loja": "Amazon",
-   "nome": "Roupa Íntima Bigfral Moviment Feminina G/XG 7 Unidades",
-   "unidades": 7,
-   "feminina": true,
-   "preco": 19.9,
-   "link": "https://www.buscape.com.br/lead?oid=400114445",
-   "via": "Buscapé",
-   "cashback": 0,
-   "baixou": 0,
-   "id": "Buscapé:400114445",
-   "porFralda": 2.84
-  },
-  {
    "loja": "Pague Menos",
    "nome": "Roupa Íntima Bigfral Moviment Feminina G/XG 7 Unidades",
    "unidades": 7,
@@ -58,6 +45,19 @@
    "via": "Pague Menos",
    "id": "Pague Menos:119661",
    "porFralda": 2.84
+  },
+  {
+   "loja": "Magalu",
+   "nome": "Roupa Íntima Bigfral Moviment Unissex G/XG 16 Unidades, 16 unidades, 1",
+   "unidades": 16,
+   "feminina": false,
+   "preco": 46.99,
+   "link": "https://www.buscape.com.br/lead?oid=1392189836",
+   "via": "Buscapé",
+   "cashback": 1.0,
+   "baixou": 0,
+   "id": "Buscapé:1392189836",
+   "porFralda": 2.94
   },
   {
    "loja": "Magalu",
@@ -80,7 +80,7 @@
    "preco": 26.99,
    "link": "https://www.buscape.com.br/lead?oid=1471515357",
    "via": "Buscapé",
-   "cashback": 0.5,
+   "cashback": 5.0,
    "baixou": 0,
    "id": "Buscapé:1471515357",
    "porFralda": 3.37
@@ -100,19 +100,6 @@
   },
   {
    "loja": "Magalu",
-   "nome": "Roupa Íntima Bigfral Moviment Unissex G/XG 16 Unidades, 16 unidades, 1",
-   "unidades": 16,
-   "feminina": false,
-   "preco": 54.9,
-   "link": "https://www.buscape.com.br/lead?oid=1392189836",
-   "via": "Buscapé",
-   "cashback": 1.0,
-   "baixou": 0,
-   "id": "Buscapé:1392189836",
-   "porFralda": 3.43
-  },
-  {
-   "loja": "Magalu",
    "nome": "Roupa Íntima Moviment Bigfral Unissex Tam G/XG 16 unidades",
    "unidades": 16,
    "feminina": false,
@@ -126,15 +113,28 @@
   },
   {
    "loja": "Magalu",
-   "nome": "Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
-   "unidades": 16,
+   "nome": "Kit 2 Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
+   "unidades": 32,
    "feminina": false,
-   "preco": 56.99,
-   "link": "https://www.buscape.com.br/lead?oid=1381609666",
+   "preco": 113.98,
+   "link": "https://www.buscape.com.br/lead?oid=1423207882",
    "via": "Buscapé",
    "cashback": 1.0,
    "baixou": 0,
-   "id": "Buscapé:1381609666",
+   "id": "Buscapé:1423207882",
+   "porFralda": 3.56
+  },
+  {
+   "loja": "Magalu",
+   "nome": "Kit 4 Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
+   "unidades": 64,
+   "feminina": false,
+   "preco": 227.96,
+   "link": "https://www.buscape.com.br/lead?oid=1399793252",
+   "via": "Buscapé",
+   "cashback": 1.0,
+   "baixou": 0,
+   "id": "Buscapé:1399793252",
    "porFralda": 3.56
   },
   {
@@ -176,6 +176,19 @@
    "via": "Pague Menos",
    "id": "Pague Menos:120372",
    "porFralda": 3.72
+  },
+  {
+   "loja": "Magalu",
+   "nome": "Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
+   "unidades": 16,
+   "feminina": false,
+   "preco": 59.99,
+   "link": "https://www.buscape.com.br/lead?oid=1381609666",
+   "via": "Buscapé",
+   "cashback": 1.0,
+   "baixou": 0,
+   "id": "Buscapé:1381609666",
+   "porFralda": 3.75
   },
   {
    "loja": "Pague Menos",
@@ -252,23 +265,6 @@
     "semCodigo": true
    },
    {
-    "titulo": "Promo Amazon com 10% OFF aplicando cupom",
-    "desc": "Desconto de 10% em compras acima de R$250, com desconto máximo limitado a R$100.",
-    "codigo": "NET10",
-    "validade": "",
-    "fonte": "Cuponomia",
-    "link": "https://www.cuponomia.com.br/desconto/amazon",
-    "tipo": "serve",
-    "minimo": 250.0,
-    "valor": 0,
-    "pct": 10,
-    "teto": 100.0,
-    "ate": false,
-    "faixas": [],
-    "primeira": false,
-    "semCodigo": false
-   },
-   {
     "titulo": "Cupom Exclusivo na Amazon: R$30 de desconto em compras acima R$100 - válido para a 1ª compra no APP",
     "desc": "Frete grátis Amazon Prime: SIM Cupom válido para a primeira compra no aplicativo da Amazon, limitado a um uso por cliente! • R$30 OFF em compras acima de R$100 • Válido só pra 1ª compra no app da Amaz",
     "codigo": "30PROMOBIT",
@@ -303,15 +299,15 @@
     "semCodigo": false
    },
    {
-    "titulo": "R$350 OFF com cupom Amazon",
-    "desc": "Desconto válido para itens selecionados.",
-    "codigo": "VEMDEAMAZON",
-    "validade": "",
-    "fonte": "Cuponomia",
-    "link": "https://www.cuponomia.com.br/desconto/amazon",
+    "titulo": "Adquira seu PlayStation 5 com cupom de R$300 de desconto",
+    "desc": "APLICÁVEL A ITENS SELECIONADOS, NÃO É NECESSÁRIO INSERIR CÓDIGO SÓ ATIVAR O CUPOM NO LINK",
+    "codigo": "CUPOMPS5",
+    "validade": "2026-11-18",
+    "fonte": "Promobit",
+    "link": "https://www.promobit.com.br/cupons/loja/amazon/",
     "tipo": "talvez",
     "minimo": 0,
-    "valor": 350.0,
+    "valor": 300.0,
     "pct": 0,
     "teto": 0,
     "ate": false,
@@ -320,18 +316,35 @@
     "semCodigo": false
    },
    {
-    "titulo": "30% OFF em suas compras com cupom Amazon",
-    "desc": "Desconto válido para produtos selecionados.",
-    "codigo": "MALAPRIME",
+    "titulo": "Aproveite para ganhar 50% OFF",
+    "desc": "Aplique cupom Amazon no carrinho para garantir desconto em produtos selecionados.",
+    "codigo": "AUTOMOTIVO50",
     "validade": "",
     "fonte": "Cuponomia",
     "link": "https://www.cuponomia.com.br/desconto/amazon",
     "tipo": "talvez",
     "minimo": 0,
     "valor": 0,
-    "pct": 30,
+    "pct": 50,
     "teto": 0,
     "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Até 40% OFF com cupom Amazon",
+    "desc": "Desconto válido para itens selecionados. Consulte as condições da oferta no site.",
+    "codigo": "BF40",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/amazon",
+    "tipo": "talvez",
+    "minimo": 0,
+    "valor": 0,
+    "pct": 40,
+    "teto": 0,
+    "ate": true,
     "faixas": [],
     "primeira": false,
     "semCodigo": false
