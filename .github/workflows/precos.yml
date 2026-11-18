@@ -2,7 +2,7 @@ name: Atualizar preços
 
 on:
   schedule:
-    - cron: "0 10 * * *"   # 07:00 em Brasília, uma vez por dia
+    - cron: "17 0 * * *"   # 21:17 em Brasília. O GitHub costuma atrasar 6–10h, então os preços chegam de madrugada/manhã
   workflow_dispatch:        # botão "Run workflow" para atualizar na hora
 
 permissions:

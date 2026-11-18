@@ -2,7 +2,7 @@
 
 Site: https://lucecyl.github.io/fralda-da-vo/
 
-Todo dia às 7h (Brasília) um robô do GitHub busca o preço da **Bigfral Moviment G/XG**, atualiza o site e manda e-mail se o preço estiver bom.
+Toda noite (agendado às 21h de Brasília; o GitHub costuma atrasar algumas horas, então os preços ficam prontos até de manhã) um robô do GitHub busca o preço da **Bigfral Moviment G/XG**, atualiza o site e manda e-mail se o preço estiver bom.
 
 ## Mudar o preço-alvo
 Edite `config.json` aqui no GitHub (ícone de lápis) e mude `precoAlvoPorFralda`.
