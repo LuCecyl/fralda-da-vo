@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-17T15:57-03:00",
+ "atualizado": "2026-11-19T04:30-03:00",
  "fontes": [
   "Buscapé",
   "Pague Menos",
@@ -299,23 +299,6 @@
     "semCodigo": false
    },
    {
-    "titulo": "Adquira seu PlayStation 5 com cupom de R$300 de desconto",
-    "desc": "APLICÁVEL A ITENS SELECIONADOS, NÃO É NECESSÁRIO INSERIR CÓDIGO SÓ ATIVAR O CUPOM NO LINK",
-    "codigo": "CUPOMPS5",
-    "validade": "2026-11-18",
-    "fonte": "Promobit",
-    "link": "https://www.promobit.com.br/cupons/loja/amazon/",
-    "tipo": "talvez",
-    "minimo": 0,
-    "valor": 300.0,
-    "pct": 0,
-    "teto": 0,
-    "ate": false,
-    "faixas": [],
-    "primeira": false,
-    "semCodigo": false
-   },
-   {
     "titulo": "Aproveite para ganhar 50% OFF",
     "desc": "Aplique cupom Amazon no carrinho para garantir desconto em produtos selecionados.",
     "codigo": "AUTOMOTIVO50",
@@ -345,6 +328,23 @@
     "pct": 40,
     "teto": 0,
     "ate": true,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Faça compras com cupom Amazon e garanta 30% OFF",
+    "desc": "Válido para produtos selecionados.",
+    "codigo": "BF30",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/amazon",
+    "tipo": "talvez",
+    "minimo": 0,
+    "valor": 0,
+    "pct": 30,
+    "teto": 0,
+    "ate": false,
     "faixas": [],
     "primeira": false,
     "semCodigo": false
