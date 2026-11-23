@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-22T03:55-03:00",
+ "atualizado": "2026-11-23T04:44-03:00",
  "fontes": [
   "Buscapé",
   "Pague Menos",
@@ -14,7 +14,7 @@
    "preco": 19.99,
    "link": "https://www.buscape.com.br/lead?oid=1573522450",
    "via": "Buscapé",
-   "cashback": 0.5,
+   "cashback": 5.0,
    "baixou": 0,
    "id": "Buscapé:1573522450",
    "porFralda": 2.5
@@ -80,7 +80,7 @@
    "preco": 26.99,
    "link": "https://www.buscape.com.br/lead?oid=1471515357",
    "via": "Buscapé",
-   "cashback": 0.5,
+   "cashback": 5.0,
    "baixou": 0,
    "id": "Buscapé:1471515357",
    "porFralda": 3.37
@@ -232,20 +232,6 @@
    "porFralda": 3.97
   },
   {
-   "loja": "São João",
-   "nome": "Roupa Íntima para Incontinência Bigfral Moviment G/XG 7 Unidades",
-   "unidades": 7,
-   "feminina": false,
-   "preco": 27.9,
-   "precoAntigo": 34.99,
-   "link": "https://www.saojoaofarmacias.com.br/roupa-intima-para-incontinencia-bigfral-moviment-gxg-7-unidades-10026134-1/p",
-   "cashback": 0,
-   "baixou": 0,
-   "via": "São João",
-   "id": "São João:18642",
-   "porFralda": 3.99
-  },
-  {
    "loja": "Magalu",
    "nome": "Roupa Íntima Moviment Bigfral Unissex Tam G/XG 07 unidades",
    "unidades": 7,
@@ -257,6 +243,20 @@
    "baixou": 0,
    "id": "Buscapé:1385139742",
    "porFralda": 4.45
+  },
+  {
+   "loja": "São João",
+   "nome": "Roupa Íntima para Incontinência Bigfral Moviment G/XG 7 Unidades",
+   "unidades": 7,
+   "feminina": false,
+   "preco": 34.99,
+   "precoAntigo": 34.99,
+   "link": "https://www.saojoaofarmacias.com.br/roupa-intima-para-incontinencia-bigfral-moviment-gxg-7-unidades-10026134-1/p",
+   "cashback": 0,
+   "baixou": 0,
+   "via": "São João",
+   "id": "São João:18642",
+   "porFralda": 5.0
   }
  ],
  "cupons": {
