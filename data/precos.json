@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-23T04:44-03:00",
+ "atualizado": "2026-11-24T06:58-03:00",
  "fontes": [
   "Buscapé",
   "Pague Menos",
@@ -61,16 +61,29 @@
   },
   {
    "loja": "Magalu",
+   "nome": "Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
+   "unidades": 16,
+   "feminina": false,
+   "preco": 49.99,
+   "link": "https://www.buscape.com.br/lead?oid=1381609666",
+   "via": "Buscapé",
+   "cashback": 1.0,
+   "baixou": 0,
+   "id": "Buscapé:1381609666",
+   "porFralda": 3.12
+  },
+  {
+   "loja": "Magalu",
    "nome": "Roupa Íntima Bigfral Moviment Descartável Unissex Tamanho G/XG 32 Unid",
    "unidades": 32,
    "feminina": false,
-   "preco": 104.99,
+   "preco": 99.99,
    "link": "https://www.buscape.com.br/lead?oid=1399588807",
    "via": "Buscapé",
    "cashback": 1.0,
    "baixou": 0,
    "id": "Buscapé:1399588807",
-   "porFralda": 3.28
+   "porFralda": 3.12
   },
   {
    "loja": "Americanas",
@@ -176,19 +189,6 @@
    "via": "Pague Menos",
    "id": "Pague Menos:120372",
    "porFralda": 3.72
-  },
-  {
-   "loja": "Magalu",
-   "nome": "Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
-   "unidades": 16,
-   "feminina": false,
-   "preco": 59.99,
-   "link": "https://www.buscape.com.br/lead?oid=1381609666",
-   "via": "Buscapé",
-   "cashback": 1.0,
-   "baixou": 0,
-   "id": "Buscapé:1381609666",
-   "porFralda": 3.75
   },
   {
    "loja": "Pague Menos",
@@ -330,35 +330,35 @@
     "semCodigo": false
    },
    {
-    "titulo": "Aproveite para ganhar 50% OFF",
-    "desc": "Aplique cupom Amazon no carrinho para garantir desconto em produtos selecionados.",
-    "codigo": "AUTOMOTIVO50",
+    "titulo": "Produtos a R$1 aplicando cupom Amazon",
+    "desc": "Produtos a R$1 na sua primeira compra, exclusivo para Membros Prime. Válido para apenas 1 item no carrinho. Válido para contas Amazon criadas até dia 13 de Novembro.",
+    "codigo": "1REALPRIME",
     "validade": "",
     "fonte": "Cuponomia",
     "link": "https://www.cuponomia.com.br/desconto/amazon",
-    "tipo": "talvez",
+    "tipo": "serve",
     "minimo": 0,
     "valor": 0,
-    "pct": 50,
+    "pct": 0,
     "teto": 0,
     "ate": false,
     "faixas": [],
-    "primeira": false,
+    "primeira": true,
     "semCodigo": false
    },
    {
-    "titulo": "Até 40% OFF com cupom Amazon",
-    "desc": "Desconto válido para itens selecionados. Consulte as condições da oferta no site.",
-    "codigo": "BF40",
+    "titulo": "Super promo Amazon com R$250 OFF aplicando cupom",
+    "desc": "Aproveite R$250 de desconto em produtos Samsung selecionados.",
+    "codigo": "SAMSUNG250",
     "validade": "",
     "fonte": "Cuponomia",
     "link": "https://www.cuponomia.com.br/desconto/amazon",
     "tipo": "talvez",
     "minimo": 0,
-    "valor": 0,
-    "pct": 40,
+    "valor": 250.0,
+    "pct": 0,
     "teto": 0,
-    "ate": true,
+    "ate": false,
     "faixas": [],
     "primeira": false,
     "semCodigo": false
@@ -781,6 +781,23 @@
    }
   ],
   "Panvel": [
+   {
+    "titulo": "Black Friday Panvel com cupom de R$20 OFF",
+    "desc": "R$20 OFF em compras acima de R$270.",
+    "codigo": "BLACK20",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/panvel",
+    "tipo": "serve",
+    "minimo": 270.0,
+    "valor": 20.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
    {
     "titulo": "Garanta Frete Grátis em suas compras",
     "desc": "Frete Grátis na entrega programada em compras acima de R$99.",
