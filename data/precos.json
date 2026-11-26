@@ -1,11 +1,24 @@
 {
- "atualizado": "2026-11-25T05:41-03:00",
+ "atualizado": "2026-11-26T05:26-03:00",
  "fontes": [
   "Buscapé",
   "Pague Menos",
   "São João"
  ],
  "ofertas": [
+  {
+   "loja": "Magalu",
+   "nome": "Roupa Íntima Bigfral Moviment Descartável Unissex Tamanho G/XG 32 Unid",
+   "unidades": 32,
+   "feminina": false,
+   "preco": 79.89,
+   "link": "https://www.buscape.com.br/lead?oid=1399588807",
+   "via": "Buscapé",
+   "cashback": 6.0,
+   "baixou": 0,
+   "id": "Buscapé:1399588807",
+   "porFralda": 2.5
+  },
   {
    "loja": "Americanas",
    "nome": "Roupa Íntima Descartável Feminina Bigfral Moviment G/XG 8un",
@@ -61,6 +74,19 @@
   },
   {
    "loja": "Magalu",
+   "nome": "Roupa Íntima Bigfral Moviment G/XG 7 Unidades",
+   "unidades": 7,
+   "feminina": false,
+   "preco": 21.49,
+   "link": "https://www.buscape.com.br/lead?oid=1506300716",
+   "via": "Buscapé",
+   "cashback": 6.0,
+   "baixou": 0,
+   "id": "Buscapé:1506300716",
+   "porFralda": 3.07
+  },
+  {
+   "loja": "Magalu",
    "nome": "Roupa Íntima Bigfral Moviment G/XG 16 Unidades",
    "unidades": 16,
    "feminina": false,
@@ -70,19 +96,6 @@
    "cashback": 6.0,
    "baixou": 0,
    "id": "Buscapé:1381609666",
-   "porFralda": 3.12
-  },
-  {
-   "loja": "Magalu",
-   "nome": "Roupa Íntima Bigfral Moviment Descartável Unissex Tamanho G/XG 32 Unid",
-   "unidades": 32,
-   "feminina": false,
-   "preco": 99.99,
-   "link": "https://www.buscape.com.br/lead?oid=1399588807",
-   "via": "Buscapé",
-   "cashback": 6.0,
-   "baixou": 0,
-   "id": "Buscapé:1399588807",
    "porFralda": 3.12
   },
   {
@@ -149,19 +162,6 @@
    "baixou": 0,
    "id": "Buscapé:1399793252",
    "porFralda": 3.56
-  },
-  {
-   "loja": "Magalu",
-   "nome": "Roupa Íntima Bigfral Moviment G/XG 7 Unidades",
-   "unidades": 7,
-   "feminina": false,
-   "preco": 24.99,
-   "link": "https://www.buscape.com.br/lead?oid=1506300716",
-   "via": "Buscapé",
-   "cashback": 6.0,
-   "baixou": 0,
-   "id": "Buscapé:1506300716",
-   "porFralda": 3.57
   },
   {
    "loja": "Amazon",
@@ -262,6 +262,23 @@
  "cupons": {
   "Amazon": [
    {
+    "titulo": "Garanta R$ 75 OFF em compras > R$ 499 com cupom #Amazon",
+    "desc": "Aplique o código promocional Amazon no carrinho e economize R$ 75 em compras acima de R$ 499.",
+    "codigo": "BLACK75OFF",
+    "validade": "",
+    "fonte": "Promobit",
+    "link": "https://www.promobit.com.br/cupons/loja/amazon/",
+    "tipo": "serve",
+    "minimo": 499.0,
+    "valor": 75.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
     "titulo": "Cupom Amazon garante até 50% de desconto",
     "desc": "Selecione o melhor cupom para a sua compra no link!",
     "codigo": "Ative o cupom no link",
@@ -277,6 +294,23 @@
     "faixas": [],
     "primeira": false,
     "semCodigo": true
+   },
+   {
+    "titulo": "Cupom NuPay: 20% OFF em todo o site acima de R$50",
+    "desc": "Aplique o código promocional NuPay no carrinho de compras (compra mínima de R$50).",
+    "codigo": "BLACKNUPAY20",
+    "validade": "",
+    "fonte": "Promobit",
+    "link": "https://www.promobit.com.br/cupons/loja/amazon/",
+    "tipo": "serve",
+    "minimo": 50.0,
+    "valor": 0,
+    "pct": 20,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
    },
    {
     "titulo": "Cupom de desconto Amazon: 20% OFF em todo o site",
@@ -328,60 +362,9 @@
     "faixas": [],
     "primeira": true,
     "semCodigo": false
-   },
-   {
-    "titulo": "Amazon oferece R$20 OFF com cupom",
-    "desc": "R$20 OFF na primeira compra.",
-    "codigo": "PRIMEIRA20BF",
-    "validade": "",
-    "fonte": "Cuponomia",
-    "link": "https://www.cuponomia.com.br/desconto/amazon",
-    "tipo": "serve",
-    "minimo": 0,
-    "valor": 20.0,
-    "pct": 0,
-    "teto": 0,
-    "ate": false,
-    "faixas": [],
-    "primeira": true,
-    "semCodigo": false
-   },
-   {
-    "titulo": "Amazon concede R$20 OFF com cupom",
-    "desc": "R$20 OFF na primeira compra no app. Confira o regulamento da promoção no site.",
-    "codigo": "APPCOMPRA",
-    "validade": "",
-    "fonte": "Cuponomia",
-    "link": "https://www.cuponomia.com.br/desconto/amazon",
-    "tipo": "serve",
-    "minimo": 0,
-    "valor": 20.0,
-    "pct": 0,
-    "teto": 0,
-    "ate": false,
-    "faixas": [],
-    "primeira": true,
-    "semCodigo": false
    }
   ],
   "Mercado Livre": [
-   {
-    "titulo": "Aproveite R$150 OFF com cupom Mercado Livre",
-    "desc": "Válido para compras acima de R$500. Consulte as condições da oferta no site.",
-    "codigo": "VEMPROMP",
-    "validade": "",
-    "fonte": "Cuponomia",
-    "link": "https://www.cuponomia.com.br/desconto/mercado-livre",
-    "tipo": "serve",
-    "minimo": 500.0,
-    "valor": 150.0,
-    "pct": 0,
-    "teto": 0,
-    "ate": false,
-    "faixas": [],
-    "primeira": false,
-    "semCodigo": false
-   },
    {
     "titulo": "Momento Mercado Livre: 30% OFF com cupom",
     "desc": "30% OFF em compras a partir de R$1, limitado a R$500.",
@@ -454,6 +437,23 @@
     "titulo": "Use cupom Mercado Livre e garanta 30% de desconto",
     "desc": "Em compras acima de R$1, com desconto máximo limitado a R$500.",
     "codigo": "ECONOMIZAML",
+    "validade": "",
+    "fonte": "Cuponomia",
+    "link": "https://www.cuponomia.com.br/desconto/mercado-livre",
+    "tipo": "serve",
+    "minimo": 1.0,
+    "valor": 0,
+    "pct": 30,
+    "teto": 500.0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
+    "titulo": "Seleção imperdível com 30% OFF utilizando cupom Mercado Livre",
+    "desc": "Em compras acima de R$1, com desconto máximo limitado a R$500.",
+    "codigo": "DESCONTONAHORA",
     "validade": "",
     "fonte": "Cuponomia",
     "link": "https://www.cuponomia.com.br/desconto/mercado-livre",
@@ -591,6 +591,23 @@
     "semCodigo": false
    },
    {
+    "titulo": "Magazine Luiza: cupom de R$ 200 OFF em todo o site acima de R$ 2000",
+    "desc": "Aplique o código promocional Magazine Luiza no carrinho de compras para compras acima de R$ 2000.",
+    "codigo": "INFLU200",
+    "validade": "",
+    "fonte": "Promobit",
+    "link": "https://www.promobit.com.br/cupons/loja/magazine-luiza/",
+    "tipo": "serve",
+    "minimo": 2000.0,
+    "valor": 200.0,
+    "pct": 0,
+    "teto": 0,
+    "ate": false,
+    "faixas": [],
+    "primeira": false,
+    "semCodigo": false
+   },
+   {
     "titulo": "Magazine Luiza: cupom de R$ 200 OFF acima de R$ 2200",
     "desc": "Aplique o código promocional Magazine Luiza no carrinho de compras em compras acima de R$ 2200.",
     "codigo": "INFLU200BLACK",
@@ -645,23 +662,6 @@
     "titulo": "Cupom Magalu com R$300 OFF em suas compras",
     "desc": "R$300 OFF para itens selecionados.",
     "codigo": "LU300",
-    "validade": "",
-    "fonte": "Cuponomia",
-    "link": "https://www.cuponomia.com.br/desconto/magazine-luiza",
-    "tipo": "talvez",
-    "minimo": 0,
-    "valor": 300.0,
-    "pct": 0,
-    "teto": 0,
-    "ate": false,
-    "faixas": [],
-    "primeira": false,
-    "semCodigo": false
-   },
-   {
-    "titulo": "Magalu concede R$300 de economia com cupom",
-    "desc": "R$300 OFF para itens selecionados.",
-    "codigo": "WHP300",
     "validade": "",
     "fonte": "Cuponomia",
     "link": "https://www.cuponomia.com.br/desconto/magazine-luiza",

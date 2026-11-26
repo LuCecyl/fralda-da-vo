@@ -163,5 +163,16 @@
    "São João": 5.0
   },
   "melhor": 2.5
+ },
+ {
+  "data": "2026-11-26",
+  "lojas": {
+   "Magalu": 2.5,
+   "Americanas": 2.5,
+   "Amazon": 2.69,
+   "Pague Menos": 2.84,
+   "São João": 5.0
+  },
+  "melhor": 2.5
  }
 ]
